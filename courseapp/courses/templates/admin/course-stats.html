@@ -1,0 +1,23 @@
+{%extends 'admin/base_site.html'%}
+{%block content%}
+<div class="container">
+    <h1>Course Stats</h1>
+    <h2>Numbers of course: {{course_count}}</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for course in course_stats%}
+            <tr>
+                <td>{{course.subject}}</td>
+                <td>{{course.lesson_count}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</div>
+{%endblock%}
